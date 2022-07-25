@@ -9,7 +9,7 @@
 a {
   text-decoration: none;
 }
-header,nav,h2,main-visual,footer{
+header,nav,h2,.main-visual,footer {
   font-family:Chalkduster,"Bradley Hand",Courier,"Segoe Print",sans-serif;
 }
 header {
@@ -61,7 +61,7 @@ header .heading {
   height: 300px; /* 親の高さに揃える */
   background-color: rgba(0, 0, 0, 0.5); /* 背景色を半透明の黒にする */
   text-align: center; /* 文字を中央揃えにする */
-  padding-top: 105px; /* 上側の内側余白で垂直方向の位置を調整 */
+  padding-top:105px; /* 上側の内側余白で垂直方向の位置を調整 */
 }
 
 .main-visual-text {
@@ -149,6 +149,66 @@ main{
   width:230px;
 }
 
+.common-heading{
+  border-bottom:8px solid #f7f7f7;
+  text-align:center;
+  line-height:0.6;
+}
+
+.sidebar-contents{
+  padding:50px 0;
+}
+
+.popular-text,
+.categories-text{
+  padding-bottom:5px;
+  border-bottom:1px solid #f7f7f7;
+  margin-bottom:5px;
+}
+
+.popular-text:last-child,
+.categories-text:last-child{
+  margin:0;
+  padding:0;
+  border:none;
+}
+.instagram .sidebar-contents{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.instagram-box{
+  width:110px;
+  padding-top:110px;
+  background-size:cover;
+  background-position:center;
+  margin-bottom:10px;
+}
+
+.instagram-box:nth-child(odd){
+  margin-right:10px;
+}
+
+.instagram-box:nth-child(1){
+  background-image: url(img/airport.jpg);
+}
+.instagram-box:nth-child(2){
+  background-image: url(img/japan.jpg);
+}
+.instagram-box:nth-child(3){
+  background-image: url(img/snow.jpg);
+}
+.instagram-box:nth-child(4){
+  background-image: url(img/japan2.jpg);
+}
+.instagram-box:nth-child(5){
+  background-image: url(img/lake.jpg);
+}
+.instagram-box:nth-child(6){
+  background-image: url(img/road.jpg);
+}
+
+
 footer {
   width: 100%;
   height: 120px;
@@ -158,5 +218,73 @@ footer {
 }
 
 .footer-text {
-  color: #fff;
+  color:#fff;
+}
+
+@media screen and (max-width:425px){
+  header{
+    width:100%;
+  }
+  .nav-list{
+    width:100%;
+  }
+  
+  .nav-list-item{
+    width:100%;
+    margin:0 0 10px 0;
+  }
+  
+  .main-visual-content{
+    width:100%;
+  }
+  
+  .sosial{
+    display:none;
+  }
+  
+  main{
+    width:100%;
+    display:block;
+  }
+  
+  .blog{
+    width:100%;
+    margin:0px;
+  }
+  
+  .blog-box{
+    padding-left:2%;
+    padding-right:2%;
+  }
+  
+  .blog-image{
+    width:49%;
+  }
+  
+  .blog-text{
+    width:49%;
+    padding-top:5px;
+  }
+  
+  .sidebar{
+    width:100%;
+  }
+  
+  .sidebar-contents{
+    padding-left:3%;
+    padding-right:3%;
+  }
+  
+  .instagram-box{
+    width:48%;
+    padding-top:48%;
+  }
+  
+  .instagram-box:nth-child(odd){
+    margin-right:4%;
+  }
+  .pagination{
+    margin-bottom:50px;
+  }
+  
 }
